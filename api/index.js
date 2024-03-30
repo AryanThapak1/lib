@@ -30,3 +30,6 @@ app.get("/", (req, res, next) => {
 app.listen(process.env.PORT || 8080, () => {
   console.log("hello");
 });
+
+
+module.exports=app;
