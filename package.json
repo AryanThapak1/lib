@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "Nodemon api/index.js"
+    "dev": "Nodemon api/index.js",
+    "build": "npm run vercel-build"
   },
   "author": "",
   "license": "ISC",
