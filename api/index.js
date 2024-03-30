@@ -16,12 +16,16 @@ const DB = mongoose
 
 const userRouter = require("../routes/userRoutes");
 const bookRouter = require("../routes/BookRoutes");
-const issueRouter= require("../routes/issueRoutes");
-const issuedBookRouter=require('../routes/issuedBookRoutes')
+const issueRouter = require("../routes/issueRoutes");
+const issuedBookRouter = require("../routes/issuedBookRoutes");
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/books", bookRouter);
-app.use("/api/v1/issueBook",issueRouter);
-app.use("/api/v1/issuedBooks",issuedBookRouter)
+app.use("/api/v1/issueBook", issueRouter);
+app.use("/api/v1/issuedBooks", issuedBookRouter);
+app.get("/", (req, res, next) => {
+  res.send("<h1>Hello</h1>");
+  next();
+});
 
 app.listen(process.env.PORT || 8080, () => {
   console.log("hello");
