@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
 
-
 dotenv.config({ path: "./config.env" });
 
 const app = express();
@@ -15,10 +14,10 @@ const DB = mongoose
   )
   .catch(() => console.log("Connection Failed"));
 
-const userRouter = require("./routes/userRoutes");
-const bookRouter = require("./routes/BookRoutes");
-const issueRouter= require("./routes/issueRoutes");
-const issuedBookRouter=require('./routes/issuedBookRoutes')
+const userRouter = require("../routes/userRoutes");
+const bookRouter = require("../routes/BookRoutes");
+const issueRouter= require("../routes/issueRoutes");
+const issuedBookRouter=require('../routes/issuedBookRoutes')
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/books", bookRouter);
 app.use("/api/v1/issueBook",issueRouter);
